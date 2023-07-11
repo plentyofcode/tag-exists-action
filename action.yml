@@ -4,11 +4,14 @@ inputs:
   tag:  
     description: 'Tag to search for'
     required: true
+  github_token:
+    description: GitHub token
+    default: ${{ github.token }}
 outputs:
   exists: # id of output
     description: 'true or false'
 runs:
-  using: 'node12'
+  using: 'node16'
   main: 'index.js'
 branding:
   icon: 'bookmark'  
